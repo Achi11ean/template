@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+  <footer class="bg-gray-900 text-gray-300 py-4 relative overflow-hidden">
+
+    <!-- Subtle Top Divider with Autumn Gradient -->
+    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#e85d04] via-[#d97706] to-[#dc2626]"></div>
+  
+ <!-- Footer Content (Perfectly Centered) -->
+<div class="container mx-auto flex flex-col items-center justify-center text-center space-y-2 relative group">
+  
+  <!-- Shimmering Link with Copyright Combined -->
+  <a href="https://jwhitproductions.com/" target="_blank" rel="noopener noreferrer"
+     class="shimmer-effect text-yellow-400 text-xs sm:text-sm font-semibold tracking-wider uppercase 
+            hover:text-yellow-300 transition-all duration-300 relative after:content-[''] 
+            after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 
+            after:bg-yellow-300 after:transition-all rounded  after:duration-300 hover:after:w-full">
+    &copy; <span id="current-year"></span> Jwhit Productions
+  </a>
+
+  <!-- All Rights Reserved Message -->
+  <p class="text-gray-400 text-[11px] sm:text-xs mt-1 tracking-wide">
+    All Rights Reserved. This website and its contents are copyrighted materials © Jwhit Productions.
+  </p>
+
+</div>
+
+    <!-- Subtle Bottom Divider with Autumn Gradient -->
+    <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#e85d04] via-[#d97706] to-[#dc2626]"></div>
+  
+    <!-- CSS -->
+    <style>
+      @keyframes shimmer {
+        0% { background-position: -200px 0; }
+        100% { background-position: 200px 0; }
+      }
+  
+      .shimmer-effect {
+        background: linear-gradient(to right, rgba(255,255,255,0) 20%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0));
+        background-size: 200px 100%;
+        animation: shimmer 2s infinite linear;
+        display: inline-block;
+        padding: 3px 0;
+        text-align: center;
+      }
+  
+      .tooltip {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(90deg, #e85d04, #d97706, #dc2626);
+        color: white;
+        font-size: 11px;
+        padding: 5px 10px;
+        border-radius: 6px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        pointer-events: none;
+        text-align: center;
+        white-space: nowrap;
+      }
+  
+      .group:hover .tooltip {
+        opacity: 1;
+      }
+    </style>
+  
+    <!-- JavaScript to Insert Current Year -->
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</html>
