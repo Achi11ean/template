@@ -12,7 +12,7 @@ const teamMembers = [
     bio: `I lead branding and creative strategy across web, social, and print.\n\n— —\n\nI love turning fuzzy ideas into crisp visuals and customer moments. Outside of work: coffee tasting, indie films, and city photography.`,
     style: "border-blue-300 bg-blue-50 hover:shadow-blue-300/50",
     backgroundImage:
-      "url('https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?q=80&w=2400')",
+      "url('https://media.istockphoto.com/id/636208094/photo/tropical-jungle.jpg?s=612x612&w=0&k=20&c=3S-pXUxM-gWEPK9ocEPU-KG3clexrw6iIru-8QYEfl0=')",
   },
   {
     name: "Kai Morgan",
@@ -21,7 +21,7 @@ const teamMembers = [
     bio: `Organizer-in-chief. I coordinate timelines, budgets, and cross‑team communication so launches feel calm and predictable.\n\n— —\n\nI’m obsessed with color‑coded boards, crisp handoffs, and celebrating wins. Weekend hobbies: trail runs and crossword battles.`,
     style: "border-blue-300 bg-blue-50 hover:shadow-blue-300/50",
     backgroundImage:
-      "url('https://images.unsplash.com/photo-1529336953121-ad5a0d43d0d1?q=80&w=2400')",
+      "url('https://images.unsplash.com/photo-1563467743682-704cc8ccb9c6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJldHR5JTIwZmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D')",
   },
   {
     name: "Remy Chen",
@@ -44,11 +44,11 @@ const teamMembers = [
   {
     name: "Jules Patel",
     role: "Product Designer",
-    image: "https://images.unsplash.com/photo-1544005316-04ce1f3b5a57?q=80&w=800",
+    image: "https://media.istockphoto.com/id/1289220545/photo/beautiful-woman-smiling-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=qmOTkGstKj1qN0zPVWj-n28oRA6_BHQN8uVLIXg0TF8=",
     bio: `Designing simple, elegant flows for complex problems.\n\n— —\n\nFigma fanatic, prototyping nerd, and accessibility advocate. Favorite things: microcopy, grids, and a good 8px rhythm.`,
     style: "border-blue-300 bg-blue-50 hover:shadow-blue-300/50",
     backgroundImage:
-      "url('https://images.unsplash.com/photo-1496302662116-45b4f9c8238a?q=80&w=2400')",
+      "url('https://media.istockphoto.com/id/1318629326/photo/a-beautiful-brown-horses-in-the-farm-during-the-sunrise.jpg?s=612x612&w=0&k=20&c=eTgB9Nvks_TN8jz_GxcSfsDTZd_J4XYf6qWXl1Vy5vI=')",
   },
   {
     name: "Riley Quinn",
@@ -115,9 +115,10 @@ export default function OurTeamBlueTemplate() {
                   {m.role}
                 </p>
               </div>
-              <p className="mt-4 text-blue-900/80 line-clamp-3 bg-white/70 rounded-xl p-3">
-                {m.bio.replaceAll("— —", "—")}
-              </p>
+<p className="mt-4 text-blue-900/80 bg-white/70 rounded-xl p-3 max-h-40 overflow-y-auto">
+  {m.bio.replaceAll("— —", "—")}
+</p>
+
             </motion.button>
           ))}
         </div>
@@ -170,7 +171,7 @@ export default function OurTeamBlueTemplate() {
                   </div>
                 </div>
 
-                <div className="mt-6 max-h-72 overflow-y-auto rounded-2xl bg-white/90 p-4 text-blue-900 leading-7">
+                <div className="mt-6 max-h-64 overflow-y-auto rounded-2xl bg-white/90 p-4 text-blue-900 leading-7">
                   {selectedMember.bio.split("\n").map((line, idx) => (
                     <p key={idx} className="mb-3">
                       {line}

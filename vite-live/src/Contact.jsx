@@ -46,14 +46,14 @@ export default function ContactPageTemplate() {
           backgroundPosition: "center 25%",
         }}
       >
-        <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2 bg-blue-800/70 backdrop-blur px-6 py-3 rounded-full flex items-center gap-3 border-2 border-blue-300 shadow-xl">
-          <h2 className="text-3xl font-bold tracking-widest">Contact</h2>
+        <div className="absolute sm:bottom-[-50px] bottom-[-40px] left-1/2 -translate-x-1/2 bg-blue-800/70 backdrop-blur px-6 py-3 rounded flex items-center gap-3 border-2 border-blue-300 shadow-xl">
+          <h2 className="text-5xl font-bold tracking-widest">Contact</h2>
         </div>
       </div>
 
       {/* Contact details */}
       <section className="max-w-6xl mx-auto p-10 pt-20 space-y-10">
-        <p className="text-2xl sm:text-3xl font-bold text-center">
+        <p className="text-xl border-b-2  sm:text-3xl font-bold text-center">
           ✨ We’d love to hear from you ✨
         </p>
 
@@ -178,9 +178,7 @@ export default function ContactPageTemplate() {
         </motion.form>
       </section>
 
-      <footer className="text-center py-6 text-blue-200/80">
-        <p>Ready for reuse across projects • Styled with blue theme</p>
-      </footer>
+
     </div>
   );
 }

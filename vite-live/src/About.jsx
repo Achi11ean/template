@@ -1,25 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800">
+    <div className="min-h-screen bg-blue-900 text-gray-900">
       {/* Banner */}
-      <div
-        className="w-full border-b-4 h-96 bg-cover bg-center shadow-xl relative"
-        style={{
-          // Swap this image for your own brand/banner
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop')",
-          backgroundPosition: "center top 60%",
-        }}
-      >
-        {/* Subtle overlay */}
-        <div className="absolute inset-0 bg-black/30 rounded-b-3xl"></div>
+      <section className="relative w-full bg-black">
+        <div
+          className="h-[42vh] min-h-64 md:h-[56vh] bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop')",
+            backgroundPosition: "center 60%",
+          }}
+          aria-label="Company banner"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
 
-        {/* Overlapping Title Pill */}
+        {/* Original Overlapping Title Pill */}
         <div className="absolute bottom-[-40px] sm:bottom-[-100px] left-1/2 -translate-x-1/2 border-2 border-blue-400 bg-gradient-to-r from-white/80 to-white/40 backdrop-blur-lg px-6 sm:px-10 py-3 sm:py-5 rounded shadow-xl w-11/12 sm:w-auto">
-          <h1 className="text-2xl sm:text-4xl text-center md:text-6xl font-serif text-black* italic drop-shadow-lg tracking-wider leading-tight">
+          <h1 className="text-2xl sm:text-4xl text-center md:text-6xl font-serif italic drop-shadow-lg tracking-wider leading-tight text-black">
             About Us
             <hr className="border-blue-400 border-2 w-full mt-2" />
             <span className="text-base sm:text-xl md:text-2xl tracking-widest block sm:inline text-black">
@@ -27,86 +28,78 @@ export default function About() {
             </span>
           </h1>
         </div>
-      </div>
+      </section>
 
       {/* Main Content */}
-      <div className="max-w-full  mx-auto bg-blue-900 shadow-2xl p-8 pt-16 space-y-12 rounded-none ">
-        {/* Lead Text */}
-        <p className="text-lg mt-8 font-serif sm:text-2xl md:text-3xl text-white font-extrabold text-center px-4 sm:px-6 leading-snug">
+      <main className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-32">
+        {/* Quick Links row */}
+        <nav aria-label="Primary">
+          <div className="grid grid-cols-3 sm:grid-cols-3 gap-3 sm:gap-4">
+            <Link
+              to="/contact"
+              className="block w-full text-center px-6 py-3 font-semibold text-white rounded-xl shadow-lg bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-500 hover:from-indigo-500 hover:via-blue-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300"
+            >
+              Contact
+            </Link>
+            <Link
+              to="/services"
+              className="block w-full text-center px-6 py-3 font-semibold text-white rounded-xl shadow-lg bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 hover:from-pink-500 hover:via-purple-600 hover:to-indigo-500 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-fuchsia-300"
+            >
+              Services
+            </Link>
+            <Link
+              to="/ourteam"
+              className="block w-full text-center px-6 py-3 font-semibold text-white rounded-xl shadow-lg bg-gradient-to-r from-sky-600 via-sky-500 to-cyan-500 hover:from-cyan-500 hover:via-sky-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300"
+            >
+              Team
+            </Link>
+          </div>
+        </nav>
+
+        {/* Headline */}
+        <motion.p
+          className="mt-12 text-center text-xl  sm:text-2xl border-l-2 border-r-2 border-t-2 md:text-3xl font-extrabold text-white"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           We craft simple, scalable experiences that help people do their best work.
-        </p>
+        </motion.p>
+<hr className="border-white border-2 w-full mt-4" />
 
-        {/* Brief Intro */}
-        <p className="text-base sm:text-lg md:text-xl text-white px-4 sm:px-6 md:px-8 text-justify/center">
+        {/* Intro */}
+        <motion.p
+          className="mt-4 text-base sm:text-lg border-b-2 border-r-2 border-l-2 md:text-xl text-center text-white max-w-6xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
+        >
           Our team focuses on clarity, performance, and thoughtful design. From idea to launch,
-          we aim to keep things intuitive and reliable—so you can move faster with confidence.
-        </p>
-
-        {/* CTA */}
-        <div className="flex justify-center">
-          <Link
-            to="/contact"
-            className="px-8 sm:px-12 py-3 font-bold text-white rounded-full shadow-lg
-                       bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-500
-                       hover:from-indigo-500 hover:via-blue-600 hover:to-blue-700
-                       transition-all duration-300 transform hover:scale-105
-                       border-2 border-white/20 text-sm tracking-wide text-center"
-          >
-            Get in Touch
-          </Link>
-        </div>
+          we keep things intuitive and reliable—so you can move faster with confidence.
+        </motion.p>
 
         {/* Info Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-white rounded-xl p-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold mb-4 text-blue-800">Our Mission</h2>
-            <p className="text-lg leading-8 text-gray-700">
-              Build delightful, dependable products that empower creators and teams—
-              keeping the experience fast, accessible, and easy to maintain.
-            </p>
+        <section className="mt-10 md:mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <article className=" bg-white p-6 md:p-8 shadow-xl border border-gray-100">
+              <h2 className="text-2xl md:text-3xl font-extrabold mb-3 text-center border-b-2 border-blue-800 text-blue-800">Our Mission</h2>
+              <p className="text-base md:text-lg leading-7 md:leading-8 text-gray-700">
+                Build delightful, dependable products that empower creators and teams—
+                keeping the experience fast, accessible, and easy to maintain.
+              </p>
+            </article>
+            <article className=" bg-white p-6 md:p-8 shadow-xl border border-gray-100">
+              <h2 className="text-2xl md:text-3xl font-extrabold mb-3 text-center border-b-2 border-blue-800 text-blue-800">Our Values</h2>
+              <p className="text-base md:text-lg leading-7 md:leading-8 text-gray-700">
+                Simplicity, trust, and quality. We ship thoughtfully, listen closely,
+                and iterate with care to deliver results that last.
+              </p>
+            </article>
           </div>
+        </section>
 
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold mb-4 text-blue-800">Our Values</h2>
-            <p className="text-lg leading-8 text-gray-700">
-              Simplicity, trust, and quality. We ship thoughtfully, listen closely,
-              and iterate with care to deliver results that last.
-            </p>
-          </div>
-        </div>
-
-        {/* Secondary CTA */}
- <p className="text-xl sm:text-2xl leading-9 text-center font-bold text-white mb-6">
-  Ready to learn more?
-</p>
-
-<div className="flex flex-col sm:flex-row justify-center gap-4">
-  {/* Services Link */}
-  <Link
-    to="/services"
-    className="px-8 sm:px-16 py-3 font-bold text-white rounded-full shadow-lg
-               bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500
-               hover:from-pink-500 hover:via-purple-600 hover:to-indigo-500
-               transition-all duration-300 transform hover:scale-105
-               border-2 border-white/20 text-sm tracking-wide text-center"
-  >
-    Explore Our Services
-  </Link>
-
-  {/* Team Link */}
-  <Link
-    to="/ourteam"
-    className="px-8 sm:px-16 py-3 font-bold text-white rounded-full shadow-lg
-               bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-500
-               hover:from-indigo-500 hover:via-blue-600 hover:to-blue-700
-               transition-all duration-300 transform hover:scale-105
-               border-2 border-white/20 text-sm tracking-wide text-center"
-  >
-    Meet the Team
-  </Link>
-</div>
-
-      </div>
+        <div className="h-16" />
+      </main>
     </div>
   );
 }

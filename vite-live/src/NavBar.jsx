@@ -28,7 +28,7 @@ const NavBar = () => {
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXZlaUXIWozu3xqknYB3S9nknCPGFPAEVZLA&s"
               alt="Company Logo"
-              className="h-20 sm:h-24 md:h-28 object-contain transition-transform duration-300 hover:scale-105"
+              className="h-20 sm:h-24 md:h-28 object-contain transition-transform duration-300"
             />
           </Link>
 

@@ -4,7 +4,7 @@ import PhotoSlider from "./PhotoSlider";
 
 export default function HomePage() {
   return (
-    <div className="relative text-center min-h-screen bg-gradient-to-b from-blue-800 via-blue-900 to-slate-800">
+    <div className="relative text-center min-h-screen pb-8 bg-gradient-to-b from-blue-800 via-blue-900 to-slate-800">
       {/* Photo Slider Section */}
       <div className="relative">
         <PhotoSlider />
