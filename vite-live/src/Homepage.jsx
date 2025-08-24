@@ -10,14 +10,14 @@ export default function HomePage() {
         <PhotoSlider />
 
         {/* Overlapping Title */}
-        <div className="absolute bottom-[-50px] border-2 border-blue-400 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-white/80 to-white/40 backdrop-blur-lg px-6 sm:px-10 py-5 rounded-full shadow-xl w-11/12 sm:w-auto">
+        <div className="absolute bottom-[-50px] border-2 border-blue-400 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-white/80 to-white/40 backdrop-blur-lg px-6 sm:px-10 py-1 rounded shadow-xl w-11/12 sm:w-auto">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-serif text-gray-900 tracking-widest italic drop-shadow-lg leading-tight">
-              My Awesome Website
+              Website Template
               <br />
               <hr className="border-blue-400 border-2 w-full sm:mt-2" />
               <span className="text-lg sm:text-xl md:text-2xl tracking-widest block sm:inline">
-                A clean React + Vite template
+                Sub Title
               </span>
             </h1>
           </div>
@@ -84,17 +84,17 @@ export default function HomePage() {
         </div>
 
         {/* Info / Bio Section */}
-        <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl p-10 border-blue-400 border-4 mx-auto my-10 w-11/12 md:w-3/4 lg:w-1/2 text-center space-y-6">
+        <div className="bg-white/80 backdrop-blur-lg rounded-xl shadow-2xl p-4 border-blue-400 border-4 mx-auto my-10 w-11/12 md:w-3/4 lg:w-1/2 text-center space-y-6">
           <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-serif text-blue-700 font-bold leading-snug sm:leading-normal px-4 sm:px-6">
-            ✨ Welcome to My Awesome Website ✨
+            ✨ Website Intro ✨
           </h2>
 
-          <hr className="border-t-4 border-blue-400 w-full my-6" />
+          <hr className="border-t-4 border-blue-400 w-full my-2" />
 
           <p className="text-gray-700 text-lg leading-relaxed">
-            This is a simple template you can reuse for your future projects.
-            It comes with a hero section, styled navigation buttons, and a clean
-            content area for your text.
+            This is a simple template intro for company data to share informaiton about
+            their services and offerings. You can customize this section to include
+            details about your business, mission, and values.
           </p>
           <p className="text-gray-700 text-lg mb-2 leading-relaxed">
             Built with <span className="font-semibold text-blue-700">React</span>,{" "}
@@ -104,7 +104,7 @@ export default function HomePage() {
 
           <Link
             to="/contact"
-            className="text-white px-6 py-3 rounded-full text-lg font-semibold shadow-md transition-all duration-500 transform hover:scale-105"
+            className="text-white px-6  rounded-full text-lg font-semibold shadow-md transition-all duration-500 transform hover:scale-105"
             style={{
               background: "linear-gradient(90deg, #3b82f6, #2563eb, #1d4ed8)",
               backgroundSize: "200% 200%",
