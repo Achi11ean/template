@@ -18,7 +18,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="backdrop-blur-md bg-blue-900/90 shadow-lg w-full sticky top-0 z-50 border-b border-blue-700">
+      <nav className="backdrop-blur-md bg-blue-900/80 shadow-lg w-full sticky top-0 z-50 border-b border-blue-700">
         <div className="container mx-auto flex justify-between items-center px-6 relative">
           {/* Logo */}
           <Link
