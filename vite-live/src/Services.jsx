@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Services({
-  orgName = "Our Company",
   contactPath = "/contact",
   services = [],
   theme = {
@@ -11,7 +10,7 @@ export default function Services({
     cardBg: "bg-white",
     cardHoverBg: "hover:bg-gray-50",
     primaryTextGrad: "bg-gradient-to-r from-indigo-600 via-blue-500 to-cyan-500",
-    accentTextGrad: "bg-gradient-to-r from-rose-600 via-orange-500 to-amber-400",
+    accentTextGrad: "bg-gradient-to-r from-amber-400 via-orange-400 to-amber-400  ",
     border: "border-white/10",
     headingText: "text-white",
     bodyText: "text-gray-700",
@@ -78,7 +77,7 @@ const defaultServices = services.length
     <div className="flex justify-center my-10">
       <Link to={contactPath}>
         <button
-          className={`px-8 py-3 rounded-full font-semibold shadow-lg transition-all duration-300 hover:scale-105 ${theme.accentTextGrad} text-transparent bg-clip-text border border-amber-300/40 hover:border-amber-300`}
+          className={`px-12 py-2 text-black  rounded-full font-semibold shadow-lg transition-all duration-300 hover:scale-105 ${theme.accentTextGrad}  font-bold border-4 border-white text-2xl border-amber-300/40 hover:border-amber-300`}
         >
           Contact Us
         </button>
@@ -94,13 +93,14 @@ const defaultServices = services.length
           <h1
             className={`text-3xl border-b-4  sm:text-4xl md:text-5xl font-extrabold ${theme.headingText}`}
           >
-            {orgName} — Services
+            Services
           </h1>
           <p className="mt-3 text-white/80 max-w-2xl mx-auto">
             Explore what we offer. Click a service card to learn more.
           </p>
         </div>
       </div>
+        <ContactButton />
 
       {/* Services Grid */}
       <div className="max-w-6xl mx-auto px-6 mt-12">
@@ -130,7 +130,6 @@ const defaultServices = services.length
           ))}
         </section>
 
-        <ContactButton />
       </div>
 
       {/* Modal */}
